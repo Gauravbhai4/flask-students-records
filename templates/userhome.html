@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <strong>{{ username }}</strong>
+    <div>
+        {% for message in get_flashed_messages() %}
+          <p style="color:red"> {{ message }}</p>
+        {% endfor %}
+      </div>
+    <form action="/entry" method="POST">
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Example file input</label>
+            <input type="file" class="form-control-file" id="exampleFormControlFile1">
+          </div>
+    <table>
+        <tr>
+            <th>english</th>
+            <th>hindi</th>
+            <th>maths</th>
+            <th>chemistry</th>
+            <th>physics</th>
+        </tr>
+        <tr>
+            <td> <input type="number" name="english" >  </td>
+            <td> <input type="number" name="hindi" > </td>
+            <td> <input type="number" name="maths" > </td>
+            <td> <input type="number" name="chemistry" > </td>
+            <td> <input type="number" name="physics" > </td>
+        </tr>
+    </table>
+    <button type="submit"> sumbit </button>
+    </form>
+    <strong>{{ percentage }}</strong>
+    <h3> <a href="/logout">Logout </a>  </h3>
+</body>
+</html>
